@@ -1,0 +1,1 @@
+﻿TestRunner.RunTests(System.Reflection.Assembly.GetExecutingAssembly());
