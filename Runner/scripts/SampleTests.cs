@@ -1,18 +1,19 @@
 public class SampleTests
 {
-    [LamoUnitTest(Description = "Checks if 2 + 2 = 4")]
-    public static bool Addition()
+    [LamoUnitTest(Description = "2 + 2 = 4", Args = [2, 2, 4])]
+    [LamoUnitTest(Description = "3 + -2 = 1", Args = [3, -2, 1])]
+    public static bool Addition(int a, int b, int expected)
     {
-        return 2 + 2 == 4;
+        return a + b == expected;
     }
 
-    [LamoUnitTest(Description = "Checks if 5 is more than 3")]
-    public static bool MoreThan()
+    [LamoUnitTest(Description = "5 > 3", Args = [5, 3])]
+    public static bool MoreThan(int a, int b)
     {
-        return 5 > 3;
+        return a > b;
     }
 
-    [LamoUnitTest(Description = "Checks if false == true. If this doesn't fail idk what's wrong.")]
+    [LamoUnitTest(Description = "If this doesn't fail idk what's wrong.")]
     public static bool ThisShouldFail()
     {
         return false;

@@ -1,5 +1,6 @@
-[AttributeUsage(AttributeTargets.Method)]
-public class LamoUnitTestAttribute : Attribute
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
+public class LamoUnitTestAttribute: Attribute
 {
-    public required string Description { get; set; }
+    public string Description { get; set; } = "N/A";
+    public object[]? Args { get; set; } = null;
 }
